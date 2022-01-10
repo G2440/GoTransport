@@ -1,0 +1,38 @@
+<% include ./partials/header %>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Luckiest+Guy|Pacifico&display=swap" rel="stylesheet">
+
+<style>
+body{
+  background: linear-gradient(#FF5F6D,#FFC371);
+}
+
+</style>
+
+<div class="container-fluid text-center display-1" style="font-family: 'Pacifico', cursive;">Leaderboard</div>
+
+<div class="table-responsive">
+<table class="table" >
+        <thead class="thead-inverse display-4"  style="background: linear-gradient(#2C3E50,#FD746C);font-family: 'Kaushan Script', cursive;" >
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Coins</th>
+          </tr>
+        </thead>
+        <tbody class="h3" style="color: rgba(223, 12, 12, 1.5);font-family: 'Luckiest Guy', cursive;" >
+
+            <% for(var i=0; i< users.length; i++){ %>
+
+                <tr>
+                        <th scope="row"><br><%= i+1 %></th>
+                        <td><br><%= users[i].username %></td>
+                        <td><br><%= users[i].coins %></td>
+                </tr>
+
+            <% } %>
+        </tbody>
+      </table>
+    </div>
+    </div>
+<% include ./partials/footer %>    
